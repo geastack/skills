@@ -1,0 +1,4 @@
+interface:
+  display_name: "GeaStack Device Control"
+  short_description: "Drive and inspect a live board"
+  default_prompt: "Use $geastack-embedded-device-control to inspect or automate a running GeaStack board with gea devctl."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "GeaStack Embedded App Builder"
+  short_description: "Create and maintain GeaStack apps"
+  default_prompt: "Use $geastack-embedded-app-builder to create or update a GeaStack embedded app."

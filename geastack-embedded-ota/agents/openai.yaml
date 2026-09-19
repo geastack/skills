@@ -1,0 +1,4 @@
+interface:
+  display_name: "GeaStack OTA"
+  short_description: "Update boards over the air"
+  default_prompt: "Use $geastack-embedded-ota to deploy GeaStack firmware over WiFi or BLE and manage OTA slots."

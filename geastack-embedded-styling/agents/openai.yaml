@@ -1,0 +1,4 @@
+interface:
+  display_name: "GeaStack Embedded Styling"
+  short_description: "Style embedded GeaStack interfaces"
+  default_prompt: "Use $geastack-embedded-styling to style or fix a GeaStack embedded UI."

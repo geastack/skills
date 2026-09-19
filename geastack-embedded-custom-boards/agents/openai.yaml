@@ -1,0 +1,4 @@
+interface:
+  display_name: "GeaStack Custom Boards"
+  short_description: "Compose a board from the chip catalog"
+  default_prompt: "Use $geastack-embedded-custom-boards to compose or edit an app-local GeaStack board from the chip catalog."

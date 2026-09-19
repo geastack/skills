@@ -1,0 +1,4 @@
+interface:
+  display_name: "GeaStack Target Bringup"
+  short_description: "Add GeaStack boards and targets"
+  default_prompt: "Use $geastack-embedded-target-bringup to add or bring up a new GeaStack target."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "GeaStack Embedded Canvas"
+  short_description: "Build fast GeaStack canvas apps"
+  default_prompt: "Use $geastack-embedded-canvas to build or optimize a GeaStack canvas app."

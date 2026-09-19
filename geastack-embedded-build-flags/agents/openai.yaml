@@ -1,0 +1,4 @@
+interface:
+  display_name: "GeaStack Build Flags"
+  short_description: "Handle GeaStack flags and tuning"
+  default_prompt: "Use $geastack-embedded-build-flags to choose GeaStack CLI, CMake, sdkconfig, or runtime flags."

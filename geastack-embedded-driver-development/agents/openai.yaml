@@ -1,0 +1,4 @@
+interface:
+  display_name: "GeaStack Driver Development"
+  short_description: "Add GeaStack drivers and bindings"
+  default_prompt: "Use $geastack-embedded-driver-development to add a GeaStack embedded driver, chip catalog entry, or host binding."

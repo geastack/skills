@@ -1,0 +1,4 @@
+interface:
+  display_name: "GeaStack Embedded Debugging"
+  short_description: "Debug GeaStack embedded hardware"
+  default_prompt: "Use $geastack-embedded-debugging to debug, flash, monitor, or profile GeaStack hardware."
