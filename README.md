@@ -5,12 +5,11 @@ Skills for building GeaStack embedded applications and hardware targets.
 GeaStack is npm-first: an application installs `@geastack/cli`, and the `gea`
 command pulls the core runtime, compiler, chips, host, engine, elements, and
 target packages from npm. App workflows use installed packages; driver and
-target development uses the corresponding source repositories. The CLI has no
-source-root override flags or board shell-script workflow.
+target development uses the corresponding source repositories.
 
-Reviewed against the local CLI, core, targets, and compiler sources on
-2026-09-19. For an installed app, check its package versions and local CLI help
-before using a recently added option. The source authorities are CLI
+The skills were last checked against the CLI, core, targets and compiler
+sources on 2026-09-19. For an installed app, check its package versions and
+local CLI help before using a recently added option. The skills are based on CLI
 `src/manifest.mjs`, `src/boards/custom-target.mjs`, `src/esp32/build.mjs`, and
 `src/commands/board.mjs`; core `packages/core/index.d.ts` and
 `packages/chips/catalog.json`; and the targets package’s `targets.json`.
@@ -66,7 +65,6 @@ npx skills check
 npx skills update
 ```
 
-
 Manual fallback:
 
 ```sh
@@ -84,8 +82,7 @@ references the agent needs.
 
 ## License
 
-MIT (see `LICENSE`). Use it, change it, ship closed-source products on it, no
-strings attached. The only GeaStack code under a different license is the
+MIT (see `LICENSE`). You can ship closed-source products built on it. The only GeaStack code under a different license is the
 embedded board support (`targets` and `@geastack/chips`, GPL-3.0-only):
 shipping closed-source firmware through those needs a commercial license.
 Contact [contact@geastack.com](mailto:contact@geastack.com) for commercial terms, support and hosted builds.
