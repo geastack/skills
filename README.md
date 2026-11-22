@@ -7,9 +7,8 @@ command pulls the core runtime, compiler, chips, host, engine, elements, and
 target packages from npm. App workflows use installed packages; driver and
 target development uses the corresponding source repositories.
 
-The skills were last checked against the CLI, core, targets and compiler
-sources on 2026-09-19. For an installed app, check its package versions and
-local CLI help before using a recently added option. The skills are based on CLI
+For an installed app, check its package versions and local CLI help
+(`npx gea --help`) before using a recently added option. The skills are based on CLI
 `src/manifest.mjs`, `src/boards/custom-target.mjs`, `src/esp32/build.mjs`, and
 `src/commands/board.mjs`; core `packages/core/index.d.ts` and
 `packages/chips/catalog.json`; and the targets package’s `targets.json`.
@@ -51,12 +50,15 @@ Install the whole repo with the Skills CLI:
 npx skills add geastack/skills -g -y
 ```
 
-Install one skill by suffixing the skill folder name:
+Install one skill by naming its folder with `--skill`:
 
 ```sh
-npx skills add geastack/skills@geastack-embedded-canvas -g -y
-npx skills add geastack/skills@geastack-embedded-target-bringup -g -y
+npx skills add geastack/skills --skill geastack-embedded-canvas -g -y
+npx skills add geastack/skills --skill geastack-embedded-target-bringup -g -y
 ```
+
+Add `-a claude-code` or `-a codex` to install for one agent only. The Skills CLI
+needs Node.js 22.20 or later.
 
 Check and update installed skills:
 
@@ -65,12 +67,21 @@ npx skills check
 npx skills update
 ```
 
-Manual fallback:
+Manual fallback, run from a clone of this repo. For Codex:
 
 ```sh
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 for skill in geastack-embedded-*; do
   ln -sfn "$PWD/$skill" "${CODEX_HOME:-$HOME/.codex}/skills/$skill"
+done
+```
+
+For Claude Code:
+
+```sh
+mkdir -p "$HOME/.claude/skills"
+for skill in geastack-embedded-*; do
+  ln -sfn "$PWD/$skill" "$HOME/.claude/skills/$skill"
 done
 ```
 
@@ -82,7 +93,4 @@ references the agent needs.
 
 ## License
 
-MIT (see `LICENSE`). You can ship closed-source products built on it. The only GeaStack code under a different license is the
-embedded board support (`targets` and `@geastack/chips`, GPL-3.0-only):
-shipping closed-source firmware through those needs a commercial license.
-Contact [contact@geastack.com](mailto:contact@geastack.com) for commercial terms, support and hosted builds.
+MIT (see `LICENSE`).
